@@ -18,7 +18,7 @@ const {
   embed
 } = require("./components/message");
 
-const zwc = ["‌", "‍", "⁡", "⁢", "⁣", "⁤"]; // 200c,200d,2061,2062,2063,2064 Where the magic happens !
+const zwc = ["meow", "mreow", "nya", "mrrp", "purr", "rawr"]; 
 
 const {
   toConceal,
@@ -49,10 +49,7 @@ class StegCloak {
     return zwc;
   }
 
-  hide(message, password, cover = "This is a confidential text") {
-    if (cover.split(" ").length === 1) {
-      throw new Error("Minimum two words required");
-    }
+  hide(message, password, cover = "nyaa mrao") {
 
     const integrity = this.integrity;
 
